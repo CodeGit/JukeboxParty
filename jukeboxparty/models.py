@@ -8,7 +8,8 @@ class Genre(models.Model):
     name = models.CharField(max_length=255)
 
 class Tag(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, primary_key=True)
+    value = models.CharField(max_length=255)
     
 class Musician(models.Model):
     name = models.CharField(max_length=255)
